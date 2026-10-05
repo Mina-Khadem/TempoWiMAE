@@ -1,0 +1,9 @@
+# Versions used for the verification runs (Python 3.10).
+torch==2.5.1
+torchvision==0.20.1   # required by timm
+numpy==2.2.6
+timm==1.0.26
+einops==0.8.2
+h5py==3.16.0
+scipy==1.15.3
+tensorboardX==2.6.5   # optional: TensorBoard scalars during pretraining

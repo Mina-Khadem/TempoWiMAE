@@ -1,0 +1,10 @@
+TempoWiMAE
+Copyright 2026 Mina Khadem
+
+This product includes software adapted from third-party projects. The
+Transformer building blocks (attention, MLP, Transformer block, 3-D patch
+embedding, stochastic depth, truncated-normal initialisation) and the
+sinusoidal positional-encoding helpers follow the masked-autoencoder
+implementation of VideoMAE, which itself builds on BEiT and on the
+pytorch-image-models (timm) library. See THIRD_PARTY_LICENSES.md for the
+corresponding license texts and attribution.
