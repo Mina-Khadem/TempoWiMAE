@@ -64,7 +64,7 @@ pip install -r requirements.txt
 No dataset is redistributed. All CSI samples are handled as real tensors `[2, T, H, W]`
 (channel 0 real part, channel 1 imaginary part, `T` snapshots, `H x W` grid).
 
-**Pretraining: WiFo datasets D4, D7, D12, D16** (Liu et al., "WiFo: Wireless foundation
+**Pretraining: WiFo datasets** (Liu et al., "WiFo: Wireless foundation
 model for channel prediction", *Science China Information Sciences*, 2025; generated with
 QuaDRiGa). Arrange the files as
 
@@ -78,6 +78,7 @@ MATLAB v7.3 files with one variable each, shape `(32, 32, 16, N)` through h5py
 tensors; no normalisation is applied. The paper uses 9 000 training samples per dataset.
 Point the code at the folder with `--data_root` or `TEMPOWIMAE_DATA_ROOT`.
 
+<!--
 **Downstream: ray-traced urban CSI sequences** (Sionna RT, Soho, London, 5.9 GHz,
 `32 x 32` antenna-subcarrier grid, 0.5 ms snapshot spacing, 1 000 sequences split in order
 into 800 / 100 / 100 train / val / test). Given any complex array of CSI sequences of shape
@@ -107,6 +108,7 @@ data/channel_estimation/             X_pilot_{train,val,test}.mat  X_{train,val,
   model input; the full CSI is the target.
 * Label-fraction study: `--train_limit 40 | 80 | 200 | 400` trains the head on a seeded
   subset of the 800 training samples.
+-->
 
 ## Pretrained Checkpoints
 
@@ -119,7 +121,7 @@ Each file is a `torch.save` dictionary with the full pretraining model under `"m
 (encoder, decoder, encoder-to-decoder projection, mask token; 356 352 parameters), the
 architecture options under `"model_config"` and the training configuration under
 `"config"`. No downstream heads are included; they are trained by `downstream.py`.
-The same files are mirrored at [Hugging Face](HUGGINGFACE_CHECKPOINT_URL).
+<!--The same files are mirrored at [Hugging Face](HUGGINGFACE_CHECKPOINT_URL).-->
 
 ```python
 from tempowimae_model import build_model, read_checkpoint, checkpoint_model_config, load_pretrained_encoder
@@ -134,6 +136,7 @@ encoder = model.encoder                  # tokens = encoder(x, mask); x: [B, 2, 
 `python inference.py --input data/wifo/D4/X_val.mat --num_samples 8` encodes a few samples
 and prints the masked-reconstruction NMSE.
 
+<!--
 ## Pretraining
 
 ```bash
@@ -232,14 +235,12 @@ The WiFo and LWM-temporal baselines are evaluated with their authors' code and a
   year    = {2026}
 }
 ```
-
+-->
 ## Contact
 
 **Mina Khadem**
 
-- Email: [YOUR_EMAIL](mailto:YOUR_EMAIL)
-- LinkedIn: [YOUR_LINKEDIN_URL](YOUR_LINKEDIN_URL)
-- Hugging Face: [YOUR_HUGGINGFACE_URL](YOUR_HUGGINGFACE_URL)
+- Email: [YOUR_EMAIL](mina.khadem@upf.edu)
 
 ## License
 
