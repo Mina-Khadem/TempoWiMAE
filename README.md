@@ -240,7 +240,7 @@ The WiFo and LWM-temporal baselines are evaluated with their authors' code and a
 
 **Mina Khadem**
 
-- Email: [YOUR_EMAIL](mina.khadem@upf.edu)
+- Email: [mina.khadem@upf.edu](mina.khadem@upf.edu)
 
 ## License
 
