@@ -1,12 +1,5 @@
 """Masked-reconstruction pretraining of TempoWiMAE.
 
-Example::
-
-    python train.py --data_root /path/to/wifo            # paper configuration (config.PRETRAIN)
-    python train.py --data_root /path/to/wifo --epochs 25
-    python train.py --data_root /path/to/wifo --set model.attn_mode=full
-"""
-
 from __future__ import annotations
 
 import argparse
