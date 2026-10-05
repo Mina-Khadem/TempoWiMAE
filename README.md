@@ -4,7 +4,7 @@ Masked-autoencoder pretraining for dynamic channel state information (CSI) with
 parameter-free factored space-time attention. The pretrained encoder is frozen and
 evaluated with lightweight heads on channel estimation and channel prediction.
 
-[Paper](PAPER_URL) · [arXiv](ARXIV_URL) · [Checkpoints](models/) · [Hugging Face](HUGGINGFACE_CHECKPOINT_URL)
+%[Paper](PAPER_URL) · [arXiv](ARXIV_URL) · [Checkpoints](models/) · [Hugging Face](HUGGINGFACE_CHECKPOINT_URL)
 
 ## Overview
 
