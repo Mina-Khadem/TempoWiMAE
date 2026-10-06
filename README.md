@@ -121,7 +121,7 @@ Each file is a `torch.save` dictionary with the full pretraining model under `"m
 (encoder, decoder, encoder-to-decoder projection, mask token; 356 352 parameters), the
 architecture options under `"model_config"` and the training configuration under
 `"config"`. No downstream heads are included; they are trained by `downstream.py`.
-<!--The same files are mirrored at [Hugging Face](HUGGINGFACE_CHECKPOINT_URL).-->
+<!--The same files are mirrored at [Hugging Face](HUGGINGFACE_CHECKPOINT_URL).
 
 ```python
 from tempowimae_model import build_model, read_checkpoint, checkpoint_model_config, load_pretrained_encoder
@@ -135,7 +135,7 @@ encoder = model.encoder                  # tokens = encoder(x, mask); x: [B, 2, 
 
 `python inference.py --input data/wifo/D4/X_val.mat --num_samples 8` encodes a few samples
 and prints the masked-reconstruction NMSE.
-
+-->
 <!--
 ## Pretraining
 
